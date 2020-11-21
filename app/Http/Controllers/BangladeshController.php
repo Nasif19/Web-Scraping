@@ -54,7 +54,7 @@ class BangladeshController extends Controller
                 $t = 0;
                 // $loc=2;
                 $loc = 'Chattogram';
-               for ($j=$i+1; $j<($i+13); $j++)
+               for ($j=$i+1; $j<($i+14); $j++)
                {
                    if(strtolower($Values[$j])=='bazar' || strtolower($Values[$j])=='baria')
                    {
@@ -66,7 +66,7 @@ class BangladeshController extends Controller
                    $t++;
                    }
                }
-               $i+=13;
+               $i+=14;
             }
 
             if(strtolower($Values[$i]) == 'sylhet')
@@ -133,12 +133,12 @@ class BangladeshController extends Controller
                 $t = 0;
                 // $loc=7;
                 $loc = 'Barishal';
-               for ($j=$i+1; $j<($i+6); $j++)
+               for ($j=$i+1; $j<($i+7); $j++)
                {
                     $data[$loc][$t]=$Values[$j];
                     $t++;
                }
-               $i+=6;
+               $i+=7;
             }
 
             if(strtolower($Values[$i]) == 'rajshahi')
