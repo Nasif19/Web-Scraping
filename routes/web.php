@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','BangladeshController@index');
+Route::get('english','BangladeshController@index');
+Route::get('bangla','BanglaController@index');
+

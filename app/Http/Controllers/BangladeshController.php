@@ -9,6 +9,7 @@ class BangladeshController extends Controller
 {
     public function index()
     {
+        
         $client = new Client();
         $url = 'https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Bangladesh';
         
@@ -36,7 +37,9 @@ class BangladeshController extends Controller
                 $loc='Dhaka';
                for ($j=$i+1; $j<($i+17); $j++)
                {
-                   if(strtolower($Values[$j])=='(district)' || strtolower($Values[$j])=='city')
+                   if(strtolower($Values[$j])=='(district)')
+                        $t= $t-1;
+                   else if(strtolower($Values[$j])=='city')
                    {
                     $data[$loc][$t-1]= $data[$loc][$t-1].' '.$Values[$j];
                    }
