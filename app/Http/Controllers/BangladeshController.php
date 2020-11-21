@@ -155,7 +155,10 @@ class BangladeshController extends Controller
             }
         }
         
-        dd($data);
+        // dd($data);
         // return $data;
+        return response()->json([
+            'data' => $data ? $data : null,
+            'Message' =>  $data?'Successfully Received' : 'No Data Found',], 200);
     }
 }
